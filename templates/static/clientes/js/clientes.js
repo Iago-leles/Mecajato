@@ -43,5 +43,19 @@ function dados_cliente(){
         return result.json()
     }).then(function(data){
         console.log(data)
+
+        document.getElementById('form-att-cliente').style.display = 'block'
+
+        document.getElementById('nome')
+        nome.value = data['nome']
+
+        document.getElementById('sobrenome')
+        sobrenome.value = data['sobrenome']
+        
+        document.getElementById('email')
+        email.value = data['email']
+        
+        document.getElementById('cpf')
+        cpf.value = data['cpf']
     })
 }
